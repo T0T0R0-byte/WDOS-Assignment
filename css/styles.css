@@ -1,0 +1,714 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4; /* Light grey background for the entire page */
+  color: #333; /* Dark grey text color */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Header Styles (All Pages) */
+header {
+  background-color: #007bff; /* Blue background for header */
+  color: white; /* White text color */
+  text-align: center;
+  padding: 1em 0;
+}
+
+header img {
+  max-width: 50px; /* Maximum width for logo image */
+  vertical-align: middle;
+}
+
+header h1 {
+  display: inline;
+  margin-left: 10px;
+  font-size: 1.5em; /* Font size for the header title */
+}
+
+/* Navigation Styles (All Pages) */
+nav {
+  background-color: #0056b3; /* Dark blue background for navigation */
+  padding: 0.5em;
+  display: flex; /* Make the nav a flex container */
+  justify-content: center; /* Center the items horizontally */
+  align-items: center; /* Center the items vertically */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Center the items horizontally */
+  align-items: center; /* Center the items vertically */
+}
+
+nav ul li {
+  margin: 0 1em;
+}
+
+nav ul li a {
+  color: white; /* White text color for nav links */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+}
+
+body {
+  display: flex; /* Enable flexbox layout */
+  flex-direction: column; /* Arrange children (header, main, footer) in a column */
+  min-height: 100vh; /* Minimum height is the full viewport height */
+}
+
+#index_bg {
+  background-image: url("images/youheal_hospital.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+main {
+  flex: 1; /* Allow the main content to grow and take up available space */
+}
+
+/* Modal Styles */
+.modal-toggle {
+  display: none; /* Hide the checkbox used to toggle the modal */
+}
+
+.modal {
+  display: none; /* Hide the modal by default */
+  position: fixed; /* Fix the modal's position relative to the viewport */
+  z-index: 1; /* Ensure the modal is on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Enable scrolling if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black background */
+  padding-top: 60px; /* Space at the top of the modal */
+}
+
+.modal-content {
+  background-color: #fefefe; /* White background for modal content */
+  margin: 5% auto; /* Center the modal content */
+  padding: 20px; /* Padding inside the modal content */
+  border: 1px solid #888; /* Light grey border */
+  width: 80%;
+  max-width: 500px; /* Maximum width for modal content */
+  border-radius: 8px; /* Rounded corners */
+}
+
+.modal .close {
+  color: #aaa; /* Light grey color for close button */
+  float: right; /* Float the close button to the right */
+  font-size: 28px; /* Font size for close button */
+  font-weight: bold; /* Bold font weight for close button */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.modal .close:hover,
+.modal .close:focus {
+  color: black; /* Black color on hover and focus */
+  text-decoration: none; /* Remove underline on hover and focus */
+}
+
+/* Form Group Styles */
+.form-group {
+  margin-bottom: 15px; /* Space between form groups */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px; /* Space below labels */
+}
+
+.form-group input,
+.form-group button {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.form-group button,
+.cancelBtn {
+  background-color: #007bff; /* Blue background for buttons */
+  color: white; /* White text color */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.form-group button:hover,
+.cancelBtn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.cancelBtn {
+  background-color: #f44336; /* Red background for cancel button */
+  margin-left: 10px;
+}
+
+.cancelBtn:hover {
+  background-color: #d32f2f; /* Darker red on hover */
+}
+
+/* Main Content Area */
+main {
+  padding: 2em;
+}
+
+/* Service Section */
+.services-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  grid-template-rows: 1fr 1fr; /* Two rows */
+  gap: 20px; /* Space between the grid items */
+  max-width: 800px; /* Optional: limit the grid's width */
+  margin: 0 auto; /* Center the grid horizontally */
+}
+
+.service-item {
+  width: 100%;
+  max-width: 400px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.service-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.service-item p {
+  padding: 1rem;
+  margin: 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Accessibility Enhancements */
+a:focus,
+button:focus {
+  outline: 2px solid #0056b3; /* Blue outline for focus */
+  outline-offset: 2px;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Make sure the image takes the full width of the container */
+
+/* About Us Section */
+/* Branch section */
+.branch {
+  background-color: #fff; /* White background for branch section */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow */
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.branch h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.branch img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px; /* Rounded corners for images */
+}
+
+.branch iframe {
+  margin-top: 20px;
+}
+
+/* About us table */
+.table-section {
+  margin: 0 10px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 2px solid #434242; /* Dark text color */
+  background: #fff;
+}
+
+table caption {
+  font-size: 24px; /* Sub-heading size */
+  font-weight: bold;
+  padding: 1.2%;
+}
+
+thead,
+tfoot {
+  text-align: center;
+  font-weight: bold;
+  background: #0056b3; /* First color */
+  color: #fff; /* Light text color */
+}
+
+thead th,
+tfoot th {
+  padding: 10px;
+  text-align: left; /* Ensure consistent alignment */
+}
+
+tr {
+  border-bottom: 2px solid #343434; /* Dark text color */
+}
+
+tbody tr img {
+  width: 75px;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left; /* Consistent alignment for headers and data */
+}
+
+tbody tr td:nth-of-type(3) {
+  text-align: justify;
+}
+
+tfoot a {
+  color: #fff; /* Light text color */
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+tfoot a:hover {
+  color: #0056b3; /* Second color */
+  text-decoration: underline;
+}
+
+/* Table responsive */
+@media screen and (max-width: 640px) {
+  table {
+    border: 0;
+    background: transparent;
+  }
+
+  thead,
+  th {
+    display: none;
+  }
+
+  tr,
+  td {
+    display: block;
+    width: 100%;
+  }
+
+  tr {
+    border: 1px solid rgb(0, 0, 0);
+    margin-bottom: 2rem;
+  }
+
+  tr:last-child {
+    margin-bottom: 0;
+  }
+
+  tbody tr:nth-child(odd) td {
+    background-color: #fff;
+  }
+
+  tbody td {
+    clear: both;
+    text-align: left;
+    position: relative; /* Helps with pseudo-element positioning */
+  }
+
+  tbody td:before {
+    content: attr(data-label) ": ";
+    float: left;
+    font-weight: bold;
+    margin-right: 1rem;
+  }
+}
+
+/* Show modal when checkbox is checked */
+.modal-toggle:checked + .modal {
+  display: block; /* Show modal when checkbox is checked */
+}
+
+#bglogin {
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  object-fit: cover; /* Ensures the image covers the area without stretching */
+  position: absolute; /* Position it absolutely within the parent container */
+  top: 0;
+  left: 0;
+  z-index: -1; /* Ensure it sits behind other content */
+}
+
+.login-form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 3em;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  width: 285px; /* Adjust this value to change the form width */
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+/* Doctors page */
+.doctors {
+  padding: 50px 0.5;
+}
+
+.doctors h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+.doctors h2 span {
+  color: #0056b3;
+}
+
+.doctors p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #999999;
+  margin: 20px 0 60px;
+  padding: 0;
+}
+
+.doctors .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.doctors .col-lg-3 {
+  width: 23%; /* Adjust this value to control spacing between boxes */
+  margin-bottom: 30px;
+}
+
+.doctors .box {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease-in-out;
+  background-color: #fff;
+}
+
+.doctors .box .image {
+  position: relative;
+  height: 0;
+  padding-bottom: 100%; /* This creates a square aspect ratio */
+  overflow: hidden;
+}
+
+.doctors .box .image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.doctors .overlay {
+  transition: all 0.5s ease-in-out;
+  z-index: 15;
+}
+
+.doctors .box:hover .overlay {
+  opacity: 0.85;
+}
+
+.doctors .box h3 {
+  margin: 0;
+  padding: 15px 0 0;
+  font-size: 17px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.doctors .box h4 {
+  margin: 0;
+  padding: 5px 0 15px;
+  font-size: 13px;
+  color: #999999;
+  font-weight: 400;
+  text-align: center;
+}
+
+.doctors .box:hover {
+  transform: translateY(-15px);
+}
+
+/* Branch Details Section */
+.branch-details {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping if needed */
+  align-items: flex-start; /* Align items at the start of the cross axis */
+  gap: 15px; /* Space between the items */
+}
+
+.branch-details img {
+  flex: 0 1 150px; /* Fixed size of 150px with shrinking capability */
+  max-width: 100%; /* Ensure the image is responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.branch-details p {
+  flex: 2 1 200px; /* Grow and shrink but have a base size of 200px */
+  max-width: 100%; /* Ensure the text is responsive */
+}
+
+.branch-details iframe {
+  flex: 2 1 250px; /* Grow and shrink but have a base size of 250px */
+  max-width: 100%; /* Ensure the iframe is responsive */
+  height: 200px; /* Fixed height for the map */
+}
+
+.service {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns: one for the image, one for the text */
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.service img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.additional-info {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
+  margin-top: 20px;
+  float: right;
+}
+.additional-info_2 {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
+  margin-top: 20px;
+  float: left;
+}
+
+/* Responsive Styles */
+
+/* General Layout */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  main {
+    padding: 1em;
+  }
+}
+
+/* Header */
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 1.2em;
+  }
+
+  header img {
+    max-width: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column; /* Stack items vertically */
+    padding: 0.5em 1em; /* Adjust padding */
+  }
+
+  nav ul {
+    flex-direction: column; /* Stack list items vertically */
+    width: 100%; /* Make the ul take the full width */
+  }
+
+  nav ul li {
+    margin: 0.5em 0; /* Reduce margin and stack items */
+  }
+
+  nav ul li a {
+    font-size: 1em; /* Adjust font size */
+    padding: 0.5em 0; /* Add padding for easier tapping */
+  }
+}
+/* Index Page Background */
+@media screen and (max-width: 768px) {
+  #index_bg {
+    height: auto;
+    min-height: 100vh;
+    display: block;
+  }
+}
+
+/* Modal */
+@media screen and (max-width: 768px) {
+  .modal-content {
+    width: 90%;
+    max-width: 300px;
+  }
+}
+
+/* Form Group */
+@media screen and (max-width: 768px) {
+  .form-group input,
+  .form-group button {
+    padding: 6px;
+  }
+}
+
+/* About Us Section */
+@media screen and (max-width: 768px) {
+  .branch {
+    margin-bottom: 2px;
+  }
+
+  .summary {
+    padding: 5px;
+  }
+
+  .table-responsive th,
+  .table-responsive td {
+    padding: 10px;
+  }
+
+  .table-responsive td.phone {
+    font-size: 8px;
+    white-space: nowrap;
+  }
+}
+
+/* Login Page */
+@media screen and (max-width: 768px) {
+  .login-form-container {
+    width: 80%; /* Reduce the width to 80% */
+    padding: 1.5em;
+    margin: 0 auto; /* Center the form */
+    box-sizing: border-box; /* Ensure padding doesn't add to the width */
+    margin-top: 100px; /* Move the box a little bit lower */
+  }
+
+  .login-page img#bglogin {
+    width: 100%;
+    height: 100%; /* Keep aspect ratio */
+    object-fit: cover; /* Cover the area */
+    display: block;
+    margin: 0 auto; /* Center the image */
+  }
+
+  /* Optional: Add some padding around the main content */
+  main {
+    padding: 3em;
+  }
+}
+
+/* Doctors Page */
+@media screen and (max-width: 768px) {
+  .doctors .row {
+    flex-direction: column; /* Stack the columns vertically */
+  }
+
+  .doctors .col-lg-3 {
+    width: 100%; /* Full width for each column */
+    margin-bottom: 20px;
+  }
+}
+
+/* Optional: To ensure consistency on even smaller screens */
+@media screen and (max-width: 480px) {
+  .doctors .col-lg-3 {
+    margin-bottom: 15px; /* Adjust the spacing if needed */
+  }
+}
+
+
+/* Branch Details Section */
+@media screen and (max-width: 768px) {
+  .branch-details {
+    flex-direction: column;
+  }
+
+  .branch-details img {
+    flex: 0 1 100%;
+  }
+
+  .branch-details p,
+  .branch-details iframe {
+    flex: 1;
+  }
+}
+
+/* Services Page */
+@media screen and (max-width: 768px) {
+  .service {
+    grid-template-columns: 1fr;
+  }
+
+  .service img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Additional Info */
+@media screen and (max-width: 768px) {
+  .additional-info,
+  .additional-info_2 {
+    float: none;
+    margin-top: 15px;
+  }
+}

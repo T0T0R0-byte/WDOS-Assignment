@@ -1,0 +1,468 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and General Layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light grey background for the entire page */
+    color: #333; /* Dark grey text color */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles (All Pages) */
+header {
+    background-color: #007bff; /* Blue background for header */
+    color: white; /* White text color */
+    text-align: center;
+    padding: 1em 0;
+}
+
+header img {
+    max-width: 50px; /* Maximum width for logo image */
+    vertical-align: middle;
+}
+
+header h1 {
+    display: inline;
+    margin-left: 10px;
+    font-size: 1.5em; /* Font size for the header title */
+}
+
+/* Navigation Styles (All Pages) */
+nav {
+    background-color: #0056b3; /* Dark blue background for navigation */
+    padding: 0.5em;
+    display: flex; /* Make the nav a flex container */
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Center the items vertically */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Center the items vertically */
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: white; /* White text color for nav links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Pharmacy-Specific Styles */
+body.pharmacy-page {
+    background-color: #f4f4f9; /* Pharmacy page-specific light grey background */
+}
+
+body.pharmacy-page header {
+    background-color: #007bff; /* Pharmacy page-specific green header */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+body.pharmacy-page header h1 {
+    font-size: 2.5em;
+}
+
+body.pharmacy-page header p {
+    font-size: 1.2em;
+}
+
+/* Medicine Section */
+body.pharmacy-page #medicines {
+    padding: 20px;
+}
+
+body.pharmacy-page section h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+body.pharmacy-page .medicine {
+    display: inline-block;
+    width: 180px;
+    margin: 15px;
+    text-align: center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+body.pharmacy-page .medicine:hover {
+    transform: translateY(-5px);
+}
+
+body.pharmacy-page .medicine img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+body.pharmacy-page .medicine label {
+    display: block;
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+body.pharmacy-page .medicine input {
+    width: 100%;
+    padding: 5px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Cart Section */
+body.pharmacy-page #cart {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body.pharmacy-page #cartTable {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+body.pharmacy-page #cartTable th,
+body.pharmacy-page #cartTable td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+body.pharmacy-page #cartTable th {
+    background-color: #f2f2f2;
+}
+
+body.pharmacy-page button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+body.pharmacy-page button:hover {
+    background-color: #007bff;
+}
+
+body.pharmacy-page button:disabled {
+    background-color: #d6d6d6;
+    cursor: not-allowed;
+}
+/* Remove Button */
+.remove-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.remove-btn:hover {
+    background-color: #d32f2f;
+}
+/* Cart Table Styling */
+#cartTable {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center; /* Center-align the content */
+}
+
+#cartTable th,
+#cartTable td {
+    border: 1px solid #ddd; /* Add borders to all table cells */
+    padding: 10px; /* Add padding for better spacing */
+}
+
+#cartTable th {
+    background-color: #f2f2f2; /* Light grey background for header */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Total Price Row Styling */
+#cartFooterRow {
+    background-color: #f9f9f9;
+    font-weight: bold;
+    text-align: right; /* Align total price to the right */
+}
+
+/* Total Price Text */
+#totalPriceRow {
+    text-align: center; /* Center-align the total price */
+    font-weight: bold;
+    padding-top: 10px;
+    color: #333;
+}
+
+/* Button Row Styling */
+#cartActions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#cartActions #buyNow {
+    flex: 0 1 auto; /* Keep Buy Now button on the left */
+}
+
+#cartActions .favourite-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end; /* Align favourite buttons to the right */
+}
+
+#cartActions button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+/* Buy Now Button */
+#buyNow {
+    background-color: #007bff;
+}
+
+#buyNow:hover {
+    background-color: #007bff;
+}
+
+/* Favourite Buttons */
+.favourite-actions button {
+    background-color: #007bff;
+}
+
+.favourite-actions button:hover {
+    background-color: #0056b3;
+}
+/* Quantity Wrapper (Center Align) */
+.quantity-wrapper {
+    display: flex;
+    align-items: center; /* Vertically center the buttons and input */
+    justify-content: center; /* Horizontally center the quantity section */
+    gap: 5px; /* Add space between buttons and input */
+}
+
+/* Quantity Buttons */
+.quantity-wrapper button {
+    width: 30px; /* Adjust button width */
+    height: 30px; /* Adjust button height */
+    background-color: #007bff; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1.2em; /* Increase font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-align: center; /* Center text inside button */
+    line-height: 1; /* Ensure text is vertically centered */
+}
+
+.quantity-wrapper button:hover {
+    background-color: #007bff; /* Darker green on hover */
+}
+
+/* Quantity Input */
+.quantity-wrapper input {
+    width: 50px; /* Narrower input box */
+    height: 30px; /* Match button height */
+    text-align: center; /* Center-align text inside input */
+    font-size: 1.2em; /* Larger font size for the number */
+    border: 1px solid #ddd; /* Border around input */
+    border-radius: 5px; /* Rounded corners to match buttons */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove extra spacing */
+}
+/* Medicines Section Styling */
+#medicines {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: nowrap; /* Prevent wrapping to a new row */
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    justify-content: flex-start; /* Align items to the left */
+    gap: 10px; /* Add space between the medicine cards */
+    padding: 30px;
+    background-color: #f9f9f9; 
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 1200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* Medicine Card */
+.medicine {
+    flex: 0 0 calc(16.6% - 20px); /* Ensure 6 cards fit in one row (16.6% width per card) */
+    margin: 0;
+    text-align: center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+}
+
+
+/* Section Headings (e.g., "Analgesics") */
+#medicines h3 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #333;
+    text-align: center; /* Align headings to the left */
+    font-weight: bold;
+    border-bottom: 2px solid #007bff; /* Green underline for distinction */
+    padding-bottom: 5px;
+}
+
+
+.medicine:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+}
+
+/* Medicine Image */
+.medicine img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain; /* Prevent image distortion */
+    margin-bottom: 10px;
+}
+
+/* Medicine Label (Name) */
+.medicine label {
+    display: block;
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Medicine Price */
+.medicine p {
+    font-size: 1.2em;
+    color: #28a745; /* Green for prices */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Quantity Wrapper */
+.quantity-wrapper {
+    display: flex;
+    align-items: center; /* Center-align buttons and input vertically */
+    justify-content: center; /* Center-align horizontally */
+    gap: 5px; /* Space between buttons and input */
+    margin-top: 10px;
+}
+
+/* Quantity Buttons */
+.quantity-wrapper button {
+    width: 30px; /* Small size for compact layout */
+    height: 30px;
+    background-color: #007bff; /* Green background */
+    color: white; /* White text */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.quantity-wrapper button:hover {
+    background-color: #007bff; /* Darker green on hover */
+}
+
+/* Quantity Input */
+.quantity-wrapper input {
+    width: 50px; /* Narrow input box for quantity */
+    height: 30px; /* Match button height */
+    text-align: center;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove extra spacing */
+}
+
+/* Section Layout */
+#medicines section {
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    #medicines {
+        display: flex; /* Use flexbox for layout */
+        flex-wrap: wrap; /* Allow wrapping to the next row */
+        justify-content: space-around; /* Center the cards with spacing */
+        padding: 20px; /* Reduce padding on smaller screens */
+        gap: 5px; /* Add space between rows */
+    }
+
+    body.pharmacy-page .medicine {
+        flex: 0 0 calc(40% - 20px); /* Each card takes 50% width minus some spacing */
+        margin: 10px 0; /* Add vertical spacing between cards */
+        box-sizing: border-box; /* Ensure padding/margin don’t affect card size */
+    }
+
+    /* Fix: Add a pseudo-element to fill space */
+    #medicines::after {
+        content: ""; /* Empty placeholder */
+        flex: 0 0 calc(40% - 20px); /* Take up the space of a card */
+        visibility: hidden; /* Don't display the placeholder visually */
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    nav {
+      flex-direction: column; /* Stack items vertically */
+      padding: 0.5em 1em; /* Adjust padding */
+    }
+  
+    nav ul {
+      flex-direction: column; /* Stack list items vertically */
+      width: 100%; /* Make the ul take the full width */
+    }
+  
+    nav ul li {
+      margin: 0.5em 0; /* Reduce margin and stack items */
+    }
+  
+    nav ul li a {
+      font-size: 1em; /* Adjust font size */
+      padding: 0.5em 0; /* Add padding for easier tapping */
+    }
+  }

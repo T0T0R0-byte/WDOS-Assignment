@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="images/favicon/site.webmanifest" />
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pharmacy - Our Hospital</title>
+    <link rel="stylesheet" href="css/pharmacy.css" />
+    <script src="js/pharmacy.js" defer></script>
+  </head>
+  <body class="pharmacy-page">
+    <header>
+      <a href="index.html"><img src="images/logo.png" alt="Hospital Logo" /></a>
+      <h1>Hospital Pharmacy</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about_us.html">About Us</a></li>
+        <li><a href="services_page.html">Services</a></li>
+        <li><a href="doctors_page.html">Doctors</a></li>
+        <li><a href="consulting_reservation_page.html">Consulting Reservation</a></li>
+        <li><a href="pharmacy_page.html">Pharmacy</a></li>
+        <li><a href="login_page.html">Login</a></li>
+      </ul>
+    </nav>
+    <main>
+      <header>
+        <h1>Welcome to the Online Pharmacy</h1>
+        <p>Choose your medicines and place your order</p>
+      </header>
+      <section id="medicines">
+    <!-- Analgesics -->
+    <section id="analgesics">
+        <h3>Analgesics</h3>
+        <div class="medicine">
+            <img src="images/paracetamol.png" alt="Paracetamol">
+            <label for="paracetamol">Paracetamol</label>
+            <p id="paracetamol-price"></p>
+            <div class="quantity-wrapper">
+                <button>-</button>
+                <input type="number" id="paracetamol" name="paracetamol" value="0" min="0">
+                <button>+</button>
+            </div>
+        </div>
+        <div class="medicine">
+            <img src="images/ibuprofen.png" alt="Ibuprofen">
+            <label for="ibuprofen">Ibuprofen</label>
+            <p id="ibuprofen-price"></p>
+            <div class="quantity-wrapper">
+                <button>-</button>
+                <input type="number" id="ibuprofen" name="ibuprofen" value="0" min="0">
+                <button>+</button>
+            </div>
+        </div>       
+        <div class="medicine">
+            <img src="images/aspirin.png" alt="Aspirin">
+            <label for="aspirin">Aspirin</label>
+            <p id="aspirin-price"></p>
+            <div class="quantity-wrapper">
+                <button>-</button>
+                <input type="number" id="aspirin" name="aspirin" value="0" min="0">
+                <button>+</button>
+            </div>
+        </div>
+        <div class="medicine">
+            <img src="images/acetaminophen.png" alt="Acetaminophen">
+            <label for="acetaminophen">Acetaminophen</label>
+            <p id="acetaminophen-price"></p>
+            <div class="quantity-wrapper">
+                <button>-</button>
+                <input type="number" id="acetaminophen" name="acetaminophen" value="0" min="0">
+                <button>+</button>
+            </div>
+        </div>
+        <div class="medicine">
+            <img src="images/naproxen.png" alt="Naproxen">
+            <label for="naproxen">Naproxen</label>
+            <p id="naproxen-price"></p>
+            <div class="quantity-wrapper">
+                <button>-</button>
+                <input type="number" id="naproxen" name="naproxen" value="0" min="0">
+                <button>+</button>
+            </div>
+        </div>
+        <div class="medicine">
+            <img src="images/diclofenac.png" alt="Diclofenac">
+            <label for="diclofenac">Diclofenac</label>
+            <p id="diclofenac-price"></p>
+            <div class="quantity-wrapper">
+                <button>-</button>
+                <input type="number" id="diclofenac" name="diclofenac" value="0" min="0">
+                <button>+</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Antibiotics -->
+    <section id="antibiotics">
+        <h3>Antibiotics</h3>
+        <div class="medicine">
+            <img src="images/amoxicillin.png" alt="Amoxicillin">
+            <label for="amoxicillin">Amoxicillin</label>
+            <p id="amoxicillin-price"></p>
+            <div class="quantity-wrapper">
+                <button>-</button>
+                <input type="number" id="amoxicillin" name="amoxicillin" value="0" min="0">
+                <button>+</button>
+            </div>
+        </div>
+        <div class="medicine">
+            <img src="images/penicillin.png" alt="Penicillin">
+            <label for="penicillin">Penicillin</label>
+            <p id="penicillin-price"></p>
+            <div class="quantity-wrapper">
+                <button>-</button>
+                <input type="number" id="penicillin" name="penicillin" value="0" min="0">
+                <button>+</button>
+            </div>
+        </div>
+        <div class="medicine">
+            <img src="images/ciprofloxacin.png" alt="Ciprofloxacin">
+            <label for="ciprofloxacin">Ciprofloxacin</label>
+            <p id="ciprofloxacin-price"></p>
+            <div class="quantity-wrapper">
+                <button>-</button>
+                <input type="number" id="ciprofloxacin" name="ciprofloxacin" value="0" min="0">
+                <button>+</button>
+            </div>
+        </div>
+        <div class="medicine">
+            <img src="images/doxycycline.png" alt="Doxycycline">
+            <label for="doxycycline">Doxycycline</label>
+            <p id="doxycycline-price"></p>
+            <div class="quantity-wrapper">
+                <button>-</button>
+                <input type="number" id="doxycycline" name="doxycycline" value="0" min="0">
+                <button>+</button>
+            </div>
+        </div>
+        <div class="medicine">
+            <img src="images/cephalexin.png" alt="Cephalexin">
+            <label for="cephalexin">Cephalexin</label>
+            <p id="cephalexin-price"></p>
+            <div class="quantity-wrapper">
+                <button>-</button>
+                <input type="number" id="cephalexin" name="cephalexin" value="0" min="0">
+                <button>+</button>
+            </div>
+        </div>
+        <div class="medicine">
+            <img src="images/clindamycin.png" alt="Clindamycin">
+            <label for="clindamycin">Clindamycin</label>
+            <p id="clindamycin-price"></p>
+            <div class="quantity-wrapper">
+                <button>-</button>
+                <input type="number" id="clindamycin" name="clindamycin" value="0" min="0">
+                <button>+</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Antidepressants -->
+    <section id="antidepressants">
+        <h3>Antidepressants</h3>
+        <div class="medicine">
+            <img src="images/fluoxetine.png" alt="Fluoxetine">
+            <label for="fluoxetine">Fluoxetine</label>
+            <p id="fluoxetine-price"></p>
+            <div class="quantity-wrapper">
+                <button>-</button>
+                <input type="number" id="fluoxetine" name="fluoxetine" value="0" min="0">
+                <button>+</button>
+            </div>
+        </div>
+        <div class="medicine">
+            <img src="images/sertraline.png" alt="Sertraline">
+            <label for="sertraline">Sertraline</label>
+            <p id="sertraline-price"></p>
+            <div class="quantity-wrapper">
+                <button>-</button>
+                <input type="number" id="sertraline" name="sertraline" value="0" min="0">
+                <button>+</button>
+            </div>
+        </div>
+        <div class="medicine">
+            <img src="images/citalopram.png" alt="Citalopram">
+            <label for="citalopram">Citalopram</label>
+            <p id="citalopram-price"></p>
+            <div class="quantity-wrapper">
+                <button>-</button>
+                <input type="number" id="citalopram" name="citalopram" value="0" min="0">
+                <button>+</button>
+            </div>
+        </div>
+        <div class="medicine">
+            <img src="images/paroxetine.png" alt="Paroxetine">
+            <label for="paroxetine">Paroxetine</label>
+            <p id="paroxetine-price"></p>
+            <div class="quantity-wrapper">
+                <button>-</button>
+                <input type="number" id="paroxetine" name="paroxetine" value="0" min="0">
+                <button>+</button>
+            </div>
+        </div>
+        <div class="medicine">
+            <img src="images/escitalopram.png" alt="Escitalopram">
+            <label for="escitalopram">Escitalopram</label>
+            <p id="escitalopram-price"></p>
+            <div class="quantity-wrapper">
+                <button>-</button>
+                <input type="number" id="escitalopram" name="escitalopram" value="0" min="0">
+                <button>+</button>
+            </div>
+        </div>
+        <div class="medicine">
+            <img src="images/duloxetine.png" alt="Duloxetine">
+            <label for="duloxetine">Duloxetine</label>
+            <p id="duloxetine-price"></p>
+            <div class="quantity-wrapper">
+                <button>-</button>
+                <input type="number" id="duloxetine" name="duloxetine" value="0" min="0">
+                <button>+</button>
+            </div>
+        </div>
+    </section>
+    
+<!-- Antihistamines -->
+<section id="antihistamines">
+    <h3>Antihistamines</h3>
+    <div class="medicine">
+        <img src="images/loratadine.png" alt="Loratadine">
+        <label for="loratadine">Loratadine</label>
+        <p id="loratadine-price"></p>
+        <div class="quantity-wrapper">
+            <button>-</button>
+            <input type="number" id="loratadine" name="loratadine" value="0" min="0">
+            <button>+</button>
+        </div>
+    </div>
+    <div class="medicine">
+        <img src="images/cetirizine.png" alt="Cetirizine">
+        <label for="cetirizine">Cetirizine</label>
+        <p id="cetirizine-price"></p>
+        <div class="quantity-wrapper">
+            <button>-</button>
+            <input type="number" id="cetirizine" name="cetirizine" value="0" min="0">
+            <button>+</button>
+        </div>
+    </div>
+    <div class="medicine">
+        <img src="images/diphenhydramine.png" alt="Diphenhydramine">
+        <label for="diphenhydramine">Diphenhydramine</label>
+        <p id="diphenhydramine-price"></p>
+        <div class="quantity-wrapper">
+            <button>-</button>
+            <input type="number" id="diphenhydramine" name="diphenhydramine" value="0" min="0">
+            <button>+</button>
+        </div>
+    </div>
+    <div class="medicine">
+        <img src="images/chlorpheniramine.png" alt="Chlorpheniramine">
+        <label for="chlorpheniramine">Chlorpheniramine</label>
+        <p id="chlorpheniramine-price"></p>
+        <div class="quantity-wrapper">
+            <button>-</button>
+            <input type="number" id="chlorpheniramine" name="chlorpheniramine" value="0" min="0">
+            <button>+</button>
+        </div>
+    </div>
+    <div class="medicine">
+        <img src="images/fexofenadine.png" alt="Fexofenadine">
+        <label for="fexofenadine">Fexofenadine</label>
+        <p id="fexofenadine-price"></p>
+        <div class="quantity-wrapper">
+            <button>-</button>
+            <input type="number" id="fexofenadine" name="fexofenadine" value="0" min="0">
+            <button>+</button>
+        </div>
+    </div>
+    <div class="medicine">
+        <img src="images/levocetirizine.png" alt="Levocetirizine">
+        <label for="levocetirizine">Levocetirizine</label>
+        <p id="levocetirizine-price"></p>
+        <div class="quantity-wrapper">
+            <button>-</button>
+            <input type="number" id="levocetirizine" name="levocetirizine" value="0" min="0">
+            <button>+</button>
+        </div>
+    </div>
+</section>
+    
+    <!-- Antihypertensives -->
+    <section id="antihypertensives">
+        <h3>Antihypertensives</h3>
+        <div class="medicine">
+            <img src="images/lisinopril.png" alt="Lisinopril">
+            <label for="lisinopril">Lisinopril</label>
+            <p id="lisinopril-price"></p>
+            <div class="quantity-wrapper">
+                <button>-</button>
+                <input type="number" id="lisinopril" name="lisinopril" value="0" min="0">
+                <button>+</button>
+            </div>
+        </div>
+        <div class="medicine">
+            <img src="images/amlodipine.png" alt="Amlodipine">
+            <label for="amlodipine">Amlodipine</label>
+            <p id="amlodipine-price"></p>
+            <div class="quantity-wrapper">
+                <button>-</button>
+                <input type="number" id="amlodipine" name="amlodipine" value="0" min="0">
+                <button>+</button>
+            </div>
+        </div>
+        <div class="medicine">
+            <img src="images/atenolol.png" alt="Atenolol">
+            <label for="atenolol">Atenolol</label>
+            <p id="atenolol-price"></p>
+            <div class="quantity-wrapper">
+                <button>-</button>
+                <input type="number" id="atenolol" name="atenolol" value="0" min="0">
+                <button>+</button>
+            </div>
+        </div>
+        <div class="medicine">
+            <img src="images/metoprolol.png" alt="Metoprolol">
+            <label for="metoprolol">Metoprolol</label>
+            <p id="metoprolol-price"></p>
+            <div class="quantity-wrapper">
+                <button>-</button>
+                <input type="number" id="metoprolol" name="metoprolol" value="0" min="0">
+                <button>+</button>
+            </div>
+        </div>
+        <div class="medicine">
+            <img src="images/losartan.png" alt="Losartan">
+            <label for="losartan">Losartan</label>
+            <p id="losartan-price"></p>
+            <div class="quantity-wrapper">
+                <button>-</button>
+                <input type="number" id="losartan" name="losartan" value="0" min="0">
+                <button>+</button>
+            </div>
+        </div>
+        <div class="medicine">
+            <img src="images/spironolactone.png" alt="spironolactone">
+            <label for="spironolactone">spironolactone</label>
+            <p id="spironolactone-price"></p>
+            <div class="quantity-wrapper">
+                <button>-</button>
+                <input type="number" id="spironolactone" name="spironolactone" value="0" min="0">
+                <button>+</button>
+            </div>
+        </div>
+    </section>
+</section>
+
+      <div id="cart">
+        <h3>Your Cart</h3>
+        <table id="cartTable">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Items will be dynamically added here -->
+          </tbody>
+          <tfoot>
+            <tr id="totalPriceRow">
+              <td colspan="3">Total Price:</td>
+              <td><span id="totalPrice">0</span></td>
+            </tr>
+          </tfoot>
+        </table>
+        <div id="cartActions">
+          <button id="buyNow">Buy Now</button>
+          <div class="favourite-actions">
+            <button id="addToFavourites">Add to Favourites</button>
+            <button id="applyFavourites">Apply Favourites</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="images/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <img src="images/logo.png" alt="Hospital Logo"
+      /></a>
+      <h1>Welcome to YouHeal Hospital</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about_us.html">About Us</a></li>
+        <li><a href="services_page.html">Services</a></li>
+        <li><a href="doctors_page.html">Doctors</a></li>
+        <li>
+          <a href="consulting_reservation_page.html">Consulting Reservation</a>
+        </li>
+        <li><a href="pharmacy_page.html">Pharmacy</a></li>
+        <li><a href="login_page.html">Login</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div class="login-page">
+        <img src="images/Login_page_bg.jpg" alt="Login_page_bg" id="bglogin" />
+      </div>
+      <div class="login-form-container">
+        <span class="close">&times;</span>
+        <form class="login-form">
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+          <div class="form-actions">
+            <button
+              type="submit"
+              class="submit-btn"
+              onclick="window.location.href='error_page.html'"
+            >
+              Login
+            </button>
+            <button
+              type="button"
+              class="forgot-password-btn"
+              onclick="window.location.href='error_page.html'"
+            >
+              Forgot password?
+            </button>
+            <button
+              type="button"
+              class="cancelBtn"
+              onclick="window.location.href='index.html'"
+            >
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Our Hospital. All rights reserved.</p>
+      <div class="contact-info">
+        <p>Contact us: (123) 456-7890 | email@ourhospital.com</p>
+      </div>
+    </footer>
+  </body>
+</html>

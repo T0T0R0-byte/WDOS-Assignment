@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="images/favicon/site.webmanifest" />
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consulting Reservation - Our Hospital</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <img src="images/logo.png" alt="Hospital Logo" /></a>
+      <h1>Reserve a Consultation</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about_us.html">About Us</a></li>
+        <li><a href="services_page.html">Services</a></li>
+        <li><a href="doctors_page.html">Doctors</a></li>
+        <li><a href="consulting_reservation_page.html">Consulting Reservation</a>
+        </li>
+        <li><a href="pharmacy_page.html">Pharmacy</a></li>
+        <li><a href="login_page.html">Login</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section class="reservation-form">
+        <h2>Book Your Appointment</h2>
+        <form action="/submit-reservation" method="post">
+          <div class="form-group">
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="full-name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+          <div class="form-group">
+            <label for="doctor">Select Doctor:</label>
+            <select id="doctor" name="doctor" required>
+              <option value="dr-john-doe">Dr. John Doe - Cardiology</option>
+              <option value="dr-jane-smith">Dr. Jane Smith - Neurology</option>
+              <option value="dr-emily-johnson">
+                Dr. Emily Johnson - Orthopedics
+              </option>
+              <option value="dr-michael-brown">
+                Dr. Michael Brown - Pediatrics
+              </option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="date">Preferred Date:</label>
+            <input type="date" id="date" name="date" required />
+          </div>
+          <div class="form-group">
+            <label for="time">Preferred Time:</label>
+            <input type="time" id="time" name="time" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Additional Message:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+          </div>
+          <div class="form-group">
+            <button type="submit">Submit Reservation</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Our Hospital. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

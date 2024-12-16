@@ -1,0 +1,339 @@
+/* Header Styles (Logo and Title) */
+header {
+    background-color: #007bff; /* Blue background for header */
+    color: white; /* White text color */
+    text-align: center;
+    padding: 1em 0;
+  }
+  
+  header img {
+    max-width: 50px; /* Maximum width for logo image */
+    vertical-align: middle;
+  }
+  
+  header h1 {
+    display: inline;
+    margin-left: 10px;
+    font-size: 1.5em; /* Font size for the header title */
+  }
+  
+/* Navigation Styles (All Pages) */
+nav {
+  background-color: #0056b3; /* Dark blue background for navigation */
+  padding: 0.5em;
+  display: flex; /* Make the nav a flex container */
+  justify-content: center; /* Center the items horizontally */
+  align-items: center; /* Center the items vertically */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Center the items horizontally */
+  align-items: center; /* Center the items vertically */
+}
+
+nav ul li {
+  margin: 0 1em;
+}
+
+nav ul li a {
+  color: white; /* White text color for nav links */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+  
+  /* Accessibility Enhancements for Links */
+  a:focus {
+    outline: 2px solid #0056b3; /* Blue outline for focus */
+    outline-offset: 2px;
+  }
+  
+
+  
+  /* Accessibility Enhancements for Buttons */
+  button:focus {
+    outline: 2px solid #0056b3; /* Blue outline for focus */
+    outline-offset: 2px;
+  }
+  
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+header {
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Progress Bar */
+.progress-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.step {
+    text-align: center;
+    flex: 1;
+    position: relative;
+}
+
+.step span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: #ddd;
+    color: white;
+    line-height: 30px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.step.active span {
+    background: #007bff;
+}
+
+.step p {
+    margin: 10px 0 0;
+}
+
+.step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: -50%;
+    width: 100%;
+    height: 2px;
+    background: #ddd;
+}
+
+.step.active:not(:last-child)::after {
+    background: #007bff;
+}
+
+/* Tab Content */
+.tab-content {
+    display: none;
+}
+
+.tab-content:not(.hidden) {
+    display: block;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1em;
+}
+
+button {
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+  
+  /* Responsive Styles for Mobile */
+  @media screen and (max-width: 768px) {
+    .burger-menu {
+      display: block; /* Show burger button */
+    }
+  
+    .nav-links {
+      display: none; /* Hide links by default */
+      flex-direction: column; /* Stack items vertically */
+      background-color: #0056b3; /* Match nav background */
+      position: absolute;
+      top: 50px; /* Position below the nav bar */
+      left: 0;
+      width: 100%; /* Full width */
+      padding: 10px;
+    }
+  
+    .nav-links.active {
+      display: flex; /* Show links when active */
+    }
+  
+    .nav-links li {
+      margin: 10px 0; /* Add spacing between items */
+      text-align: center;
+    }
+  }
+  
+
+/* Hidden Element */
+.hidden {
+    display: none;
+}
+
+/* Order Summary Table */
+#orderSummaryTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#orderSummaryTable th,
+#orderSummaryTable td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+#orderSummaryTable th {
+    background: #f2f2f2;
+    font-weight: bold;
+}
+input:invalid {
+    border: 1px solid red;
+}
+
+input:valid {
+    border: 1px solid #007bff;
+}
+/* Highlight invalid inputs */
+input:invalid {
+    border: 2px solid red;
+}
+
+input:valid {
+    border: 2px solid #007bff;
+}
+
+/* Styling for better usability */
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+input::placeholder {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+  /* Responsive Navigation Adjustments */
+  @media screen and (max-width: 768px) {
+    nav {
+      flex-direction: column; /* Stack items vertically */
+      padding: 0.5em 1em; /* Adjust padding */
+    }
+  
+    nav ul {
+      flex-direction: column; /* Stack list items vertically */
+      width: 100%; /* Make the ul take the full width */
+    }
+  
+    nav ul li {
+      margin: 0.5em 0; /* Reduce margin and stack items */
+    }
+  
+    nav ul li a {
+      font-size: 1em; /* Adjust font size */
+      padding: 0.5em 0; /* Add padding for easier tapping */
+    }
+  }
+
+/* Responsive Design for Payment Page */
+@media screen and (max-width: 768px) {
+    /* Adjust the Progress Bar */
+    .progress-bar {
+        flex-direction: column; /* Stack progress bar vertically */
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .step {
+        flex: none; /* Remove equal spacing for steps */
+        text-align: left;
+    }
+
+    .step span {
+        width: 25px; /* Reduce size of step circle */
+        height: 25px;
+        line-height: 25px;
+        font-size: 0.8em;
+    }
+
+    .step p {
+        font-size: 0.9em; /* Smaller text */
+    }
+
+    /* Adjust Form Layout */
+    form {
+        gap: 10px; /* Reduce spacing between form elements */
+    }
+
+    label {
+        font-size: 0.9em; /* Smaller labels */
+    }
+
+    input {
+        padding: 8px; /* Reduce input padding */
+        font-size: 0.9em; /* Smaller font size */
+    }
+
+    button {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+
+    /* Order Summary Table */
+    #orderSummaryTable th,
+    #orderSummaryTable td {
+        padding: 8px; /* Reduce padding */
+        font-size: 0.9em; /* Adjust font size */
+    }
+}

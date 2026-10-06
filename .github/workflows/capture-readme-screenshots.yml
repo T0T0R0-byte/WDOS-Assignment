@@ -1,0 +1,49 @@
+name: Refresh YouHeal README Screenshots
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'docs/screenshots/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Playwright
+        run: |
+          mkdir -p /tmp/playwright
+          cd /tmp/playwright
+          npm init -y
+          npm install playwright@1.58.1
+          npx playwright install --with-deps chromium
+
+      - name: Start local site
+        run: |
+          python3 -m http.server 8000 >/tmp/youheal-http.log 2>&1 &
+          echo $! > /tmp/youheal-http.pid
+          sleep 2
+
+      - name: Capture screenshots
+        env:
+          NODE_PATH: /tmp/playwright/node_modules
+        run: node scripts/capture-readme-screenshots.cjs
+
+      - name: Commit screenshots
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/screenshots
+          if git diff --cached --quiet; then
+            echo 'No screenshot changes.'
+          else
+            git commit -m 'docs: refresh YouHeal screenshots'
+            git push
+          fi
